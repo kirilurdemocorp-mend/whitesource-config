@@ -37,11 +37,13 @@
     "workflowRules": {
       "enabled": false
     },
-    "enableRenovate": true,
     "extends": [
       "config:recommended",
-      "mergeConfidence=all-badges",
-      "github>kirilurdemocorp-mend/whitesource-config:smart-merge"
-    ]
+      "github>your-org/whitesource-config:smart-merge"
+    ],
+    "ignorePresets": [
+      "mergeConfidence:all-badges"
+    ],
+    "enableRenovate": true
   }
 }
