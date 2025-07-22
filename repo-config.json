@@ -40,7 +40,7 @@
     "enableRenovate": true,
     "extends": [
       "config:recommended",
-      ":mergeConfidence=all-badges",
+      "mergeConfidence=all-badges",
       "github>kirilurdemocorp-mend/whitesource-config:smart-merge"
     ]
   }
