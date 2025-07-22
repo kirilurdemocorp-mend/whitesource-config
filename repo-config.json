@@ -36,22 +36,12 @@
   "remediateSettings": {
     "workflowRules": {
       "enabled": false
-    }
-  },
-  "imageSettings": {
-    "imageTracing": {
-      "enableImageTracingPR": false,
-      "addRepositoryCoordinate": false,
-      "addDockerfilePath": false,
-      "addMendIdentifier": false
     },
-    "remediateSettings": {
-      "enableRenovate": true
-    },
-    "extends": {
-      "config": "recommended",
-      "mergeConfidence": "all-badges",
-      "github": "kirilurdemocorp-mend/whitesource-config:smart-merge"
-    }
+    "enableRenovate": true,
+    "extends": [
+      "config:recommended",
+      ":mergeConfidence=all-badges",
+      "github>kirilurdemocorp-mend/whitesource-config:smart-merge"
+    ]
   }
 }
