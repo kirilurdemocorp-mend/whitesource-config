@@ -39,7 +39,7 @@
     },
     "extends": [
       "config:recommended",
-      "github>your-org/whitesource-config:smart-merge"
+      "github>kirilurdemocorp-mend/whitesource-config:smart-merge"
     ],
     "ignorePresets": [
       "mergeConfidence:all-badges"
