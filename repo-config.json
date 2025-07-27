@@ -41,9 +41,13 @@
       "config:recommended",
       "github>kirilurdemocorp-mend/whitesource-config:smart-merge"
     ],
-    "ignorePresets": [
-      "mergeConfidence:all-badges"
-    ],
+    "renovateConfig": {
+      "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+      "extends": [
+        "config:recommended",
+        "mergeConfidence:all-badges"
+      ]
+    },
     "enableRenovate": true
   }
 }
