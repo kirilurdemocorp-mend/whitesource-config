@@ -39,5 +39,6 @@
       "config:recommended",
       "github>kirilurdemocorp-mend/whitesource-config:smart-merge"
     ]
-  }
+  },
+  "mergeConfidence": "all"
 }
