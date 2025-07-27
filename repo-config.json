@@ -37,8 +37,9 @@
     "enableRenovate": true,
     "extends": [
       "config:recommended",
-      "github>kirilurdemocorp-mend/whitesource-config:smart-merge"
+      "mergeConfidence:all-badges",
+      "github>kirilurdemocorp-mend/whitesource-config:smart-merge",
+      ":disableRateLimiting"
     ]
-  },
-  "mergeConfidence": "all"
+  }
 }
