@@ -34,20 +34,13 @@
     "issueType": "repo"
   },
   "remediateSettings": {
+    "enableRenovate": true,
     "workflowRules": {
       "enabled": false
     },
     "extends": [
       "config:recommended",
       "github>kirilurdemocorp-mend/whitesource-config:smart-merge"
-    ],
-    "renovateConfig": {
-      "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-      "extends": [
-        "config:recommended",
-        "mergeConfidence:all-badges"
-      ]
-    },
-    "enableRenovate": true
+    ]
   }
 }
