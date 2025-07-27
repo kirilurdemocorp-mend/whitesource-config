@@ -16,28 +16,25 @@
     "snippetSize": 10
   },
   "checkRunSettings": {
-    "vulnerableCheckRunConclusionLevel": "failure",
+    "vulnerableCheckRunConclusionLevel": "FAILURE",
     "displayMode": "diff",
     "useMendCheckNames": true,
-    "strictMode": "failure"
+    "strictMode": "FAILURE"
   },
   "checkRunSettingsSAST": {
-    "checkRunConclusionLevel": "failure",
-    "severityThreshold": "low"
+    "checkRunConclusionLevel": "FAILURE",
+    "severityThreshold": "LOW"
   },
   "issueSettings": {
     "minSeverityLevel": "LOW",
     "issueType": "DEPENDENCY"
   },
   "issueSettingsSAST": {
-    "minSeverityLevel": "high",
-    "issueType": "repo"
+    "minSeverityLevel": "HIGH",
+    "issueType": "REPO"
   },
   "remediateSettings": {
     "enableRenovate": true,
-    "workflowRules": {
-      "enabled": false
-    },
     "extends": [
       "config:recommended",
       "github>kirilurdemocorp-mend/whitesource-config:smart-merge"
