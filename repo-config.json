@@ -4,14 +4,14 @@
     "configExternalURL": "",
     "enableReachability": true,
     "exploitability": true,
-    "enableIac": true,
+    "enableIac": false,
     "baseBranches": []
   },
   "scanSettingsSAST": {
     "enableScan": true,
     "enableRemediation": true,
     "scanPullRequests": true,
-    "incrementalScan": true,
+    "incrementalScan": false,
     "baseBranches": [],
     "snippetSize": 10
   },
