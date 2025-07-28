@@ -39,7 +39,6 @@
       "config:recommended",
       "mergeConfidence:all-badges",
       "github>kirilurdemocorp-mend/whitesource-config:smart-merge",
-      ":disableRateLimiting"
     ]
   }
 }
