@@ -1,44 +1,21 @@
 {
   "scanSettings": {
     "configMode": "AUTO",
-    "configExternalURL": "",
-    "enableReachability": true,
-    "exploitability": true,
-    "enableIac": false,
+    "enableLicenseViolations": true,
     "baseBranches": []
   },
-  "scanSettingsSAST": {
-    "enableScan": true,
-    "enableRemediation": true,
-    "scanPullRequests": false,
-    "incrementalScan": false,
-    "baseBranches": [],
-    "snippetSize": 10
-  },
   "checkRunSettings": {
-    "vulnerableCheckRunConclusionLevel": "FAILURE",
+    "vulnerableCheckRunConclusionLevel": "failure",
     "displayMode": "diff",
-    "useMendCheckNames": true,
-    "strictMode": "FAILURE"
-  },
-  "checkRunSettingsSAST": {
-    "checkRunConclusionLevel": "FAILURE",
-    "severityThreshold": "LOW"
+    "useMendCheckNames": true
   },
   "issueSettings": {
-    "minSeverityLevel": "MEDIUM",
+    "minSeverityLevel": "LOW",
     "issueType": "DEPENDENCY"
   },
-  "issueSettingsSAST": {
-    "minSeverityLevel": "HIGH",
-    "issueType": "REPO"
-  },
   "remediateSettings": {
-    "enableRenovate": true,
-    "extends": [
-      "config:recommended",
-      "mergeConfidence:all-badges",
-      "github>kirilurdemocorp-mend/whitesource-config:smart-merge"
-    ]
+    "workflowRules": {
+      "enabled": true
+    }
   }
 }
