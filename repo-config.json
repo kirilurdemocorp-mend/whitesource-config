@@ -14,21 +14,15 @@
     "issueType": "DEPENDENCY"
   },
   "remediateSettings": {
-    // Mend Remediate workflow for opening security fix PRs
     "workflowRules": {
       "enabled": true
     },
-
-    // Enable Renovate globally
     "enableRenovate": true,
-
-    // Global Renovate configuration
     "renovateConfig": {
       "extends": ["config:base"],
       "dependencyDashboard": true,
       "rangeStrategy": "replace",
       "schedule": ["after 9am on monday"],
-
       "packageRules": [
         {
           "matchPackagePatterns": ["*"],
@@ -40,7 +34,6 @@
           "automerge": true
         }
       ],
-
       "prConcurrentLimit": 5,
       "prHourlyLimit": 2
     }
