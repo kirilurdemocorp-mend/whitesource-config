@@ -2,7 +2,9 @@
   "scanSettings": {
     "configMode": "AUTO",
     "enableLicenseViolations": true,
-    "baseBranches": []
+    "baseBranches": [],
+    "excludedPaths": ["node_modules", "dist", "target", "vendor", ".git"],
+    "resolveDependencies": false
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
@@ -22,7 +24,7 @@
       "extends": ["config:base"],
       "dependencyDashboard": true,
       "rangeStrategy": "replace",
-      "schedule": ["after 9am on monday"],
+      "schedule": ["every weekday"],
       "packageRules": [
         {
           "matchPackagePatterns": ["*"],
