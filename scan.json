@@ -1,0 +1,9 @@
+{
+  "repositories": [
+    {
+      "fullName": "kirilurdemocorp-mend/GradleTest",
+      "branchName": "main",
+      "uploadScannerLogs": true
+    }
+  ]
+}
