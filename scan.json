@@ -1,0 +1,10 @@
+{
+  "repositories": [
+    {
+      "fullName": "kirilurdemocorp-mend/Gradle2",
+      "branchName": "main",
+      "uploadScannerLogs": true
+    }
+  ]
+}
+
