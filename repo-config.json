@@ -1,44 +1,45 @@
 {
   "scanSettings": {
     "configMode": "AUTO",
-    "enableLicenseViolations": true,
-    "enableReachability": true,
+    "configExternalURL": "",
+    "projectToken": "",
+    "baseBranches": []
+  },
+  "scanSettingsSAST": {
+    "enableScan": true,
+    "scanPullRequests": true,
+    "incrementalScan": true,
     "baseBranches": [],
-    "excludedPaths": ["node_modules", "dist", "target", "vendor", ".git"],
-    "resolveDependencies": false
+    "snippetSize": 10
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
     "displayMode": "diff",
     "useMendCheckNames": true
   },
+  "checkRunSettingsSAST": {
+    "checkRunConclusionLevel": "failure",
+    "severityThreshold": "high"
+  },
   "issueSettings": {
     "minSeverityLevel": "LOW",
     "issueType": "DEPENDENCY"
   },
+  "issueSettingsSAST": {
+    "minSeverityLevel": "high",
+    "issueType": "repo"
+  },
   "remediateSettings": {
     "workflowRules": {
       "enabled": true
-    },
-    "enableRenovate": true,
-    "RemediateSettings": {
-      "extends": ["mergeConfidence:all-badges"],
-      "dependencyDashboard": true,
-      "rangeStrategy": "replace",
-      "schedule": ["every weekday"],
-      "packageRules": [
-        {
-          "matchPackagePatterns": ["*"],
-          "groupName": "all dependencies",
-          "groupSlug": "all-deps"
-        },
-        {
-          "matchDepTypes": ["devDependencies"],
-          "automerge": true
-        }
-      ],
-      "prConcurrentLimit": 20,
-      "prHourlyLimit": 20
+    }
+  },
+  "imageSettings": {
+    "imageTracing": {
+      "enableImageTracingPR": false,
+      "addRepositoryCoordinate": false,
+      "addDockerfilePath": false,
+      "addMendIdentifier": false
     }
   }
 }
