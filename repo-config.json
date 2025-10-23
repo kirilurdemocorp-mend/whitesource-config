@@ -21,7 +21,7 @@
       "enabled": true
     },
     "enableRenovate": true,
-    "renovateConfig": {
+    "RemediateSettings": {
       "extends": ["mergeConfidence:all-badges"],
       "dependencyDashboard": true,
       "rangeStrategy": "replace",
