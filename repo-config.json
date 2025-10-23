@@ -22,7 +22,7 @@
     },
     "enableRenovate": true,
     "renovateConfig": {
-      "extends": ["config:base"],
+      "extends": ["mergeConfidence:all-badges"],
       "dependencyDashboard": true,
       "rangeStrategy": "replace",
       "schedule": ["every weekday"],
