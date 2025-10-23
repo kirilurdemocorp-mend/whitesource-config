@@ -2,6 +2,7 @@
   "scanSettings": {
     "configMode": "AUTO",
     "enableLicenseViolations": true,
+    "enableReachability": true,
     "baseBranches": [],
     "excludedPaths": ["node_modules", "dist", "target", "vendor", ".git"],
     "resolveDependencies": false
