@@ -20,11 +20,9 @@
       "enabled": true
     },
     "enableRenovate": true,
-    "renovateConfig": {
-      "extends": ["config:base"],
-      "dependencyDashboard": true,
-      "rangeStrategy": "replace",
-      "schedule": ["every weekday"],
+    "extends": [
+      "config:recommended",
+      "mergeConfidence:all-badges",
       "packageRules": [
         {
           "matchPackagePatterns": ["*"],
