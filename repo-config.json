@@ -4,7 +4,7 @@
     "enableLicenseViolations": true,
     "baseBranches": [],
     "excludedPaths": ["node_modules", "dist", "target", "vendor", ".git"],
-    "resolveDependencies": false
+    "resolveDependencies": true
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
@@ -22,20 +22,20 @@
     "enableRenovate": true,
     "extends": [
       "config:recommended",
-      "mergeConfidence:all-badges",
-      "packageRules": [
-        {
-          "matchPackagePatterns": ["*"],
-          "groupName": "all dependencies",
-          "groupSlug": "all-deps"
-        },
-        {
-          "matchDepTypes": ["devDependencies"],
-          "automerge": true
-        }
-      ],
-      "prConcurrentLimit": 30,
-      "prHourlyLimit": 30
-    }
+      "mergeConfidence:all-badges"
+    ],
+    "packageRules": [
+      {
+        "matchPackagePatterns": ["*"],
+        "groupName": "all dependencies",
+        "groupSlug": "all-deps"
+      },
+      {
+        "matchDepTypes": ["devDependencies"],
+        "automerge": true
+      }
+    ],
+    "prConcurrentLimit": 30,
+    "prHourlyLimit": 30
   }
 }
