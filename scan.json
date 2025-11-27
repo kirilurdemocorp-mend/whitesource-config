@@ -1,0 +1,10 @@
+{
+  "repositories": [
+    {
+      "fullName": "kirilurdemocorp-mend/VulnerableSwiftProject",
+      "branchName": "main",
+      "uploadScannerLogs": true,
+      "scanType": "sca"
+    }
+  ]
+}
