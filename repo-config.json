@@ -1,8 +1,7 @@
 {
   "scanSettings": {
     "configMode": "AUTO",
-    "configExternalURL": ""
-   },
+    "configExternalURL": "",
     "enableLicenseViolations": true,
     "enableIaC": true,
     "enableReachability": true,
