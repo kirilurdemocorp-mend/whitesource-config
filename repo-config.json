@@ -1,41 +1,104 @@
 {
   "scanSettings": {
     "configMode": "AUTO",
+    "configExternalURL": "",
+    "baseBranches": [
+      "develop",
+      "main",
+      "master",
+      "release",
+      "development"
+    ],
     "enableLicenseViolations": true,
-    "baseBranches": [],
-    "excludedPaths": ["node_modules", "dist", "target", "vendor", ".git"],
-    "resolveDependencies": true
+    "enableIaC": true,
+    "enableReachability": true,
+    "exploitability": true
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
     "displayMode": "diff",
-    "useMendCheckNames": true
+    "strictMode": "warning"
   },
   "issueSettings": {
     "minSeverityLevel": "LOW",
-    "issueType": "DEPENDENCY"
+    "issueType": "DEPENDENCY",
+    "displayLicenseViolations": true
   },
   "remediateSettings": {
-    "workflowRules": {
-      "enabled": true
-    },
     "enableRenovate": true,
     "extends": [
-      "config:recommended",
-      "mergeConfidence:all-badges"
+        ":enableRenovate",
+        ":rebaseStalePrs",
+        ":semanticCommits",
+        "config:recommended",
+        "docker:enableMajor",
+        "mergeConfidence:all-badges",
+        "group:monorepos",
+        "group:recommended",
+        "replacements:all",
+        "workarounds:all"
     ],
+    "timezone": "UTC",
+    "schedule": [
+      "before 5am every weekday"
+    ],
+    "baseBranches": [
+      "main",
+      "master"
+    ],
+    "dependencyDashboard": true,
+    "dependencyDashboardAutoclose": true,
+    "dependencyDashboardTitle": "Renovate Dashboard 🚧",
+    "dependencyDashboardOSVVulnerabilitySummary": "unresolved",
+    "major": {
+      "dependencyDashboardApproval": true
+    },
     "packageRules": [
       {
-        "matchPackagePatterns": ["*"],
-        "groupName": "all dependencies",
-        "groupSlug": "all-deps"
+       "matchPackagePatterns": [".*"],
+       "dependencyDashboardApproval": true
+     },
+      {
+        "matchUpdateTypes": [
+          "patch",
+          "minor"
+        ],
+        "labels": [
+          "patch release"
+        ]
       },
       {
-        "matchDepTypes": ["devDependencies"],
-        "automerge": true
+        "matchDepTypes": [
+          "devDependencies"
+        ],
+        "matchUpdateTypes": [
+          "patch",
+          "minor"
+        ],
+        "groupName": "devDependencies (non-major)",
+        "groupSlug": "dev-dependencies-non-major"
+      },
+      {
+        "matchDatasources": [
+          "go"
+        ],
+        "matchUpdateTypes": [
+          "pinDigest"
+        ],
+        "enabled": false
       }
     ],
-    "prConcurrentLimit": 30,
-    "prHourlyLimit": 30
-  }
-}
+    "minimumReleaseAge": "3 days",
+    "prConcurrentLimit": 3,
+    "separateMinorPatch": true,
+    "separateMultipleMajor": true,
+    "kubernetes": {
+      "fileMatch": [
+        "^\\.vonage/deploy/.*application\\.yaml$"
+      ]
+    },
+    "postUpdateOptions": [
+      "gomodTidy"
+    ],
+    "hostRules": [
+      {
