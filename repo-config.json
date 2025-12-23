@@ -27,7 +27,6 @@
   "remediateSettings": {
     "enableRenovate": true,
     "extends": [
-      ":enableRenovate",
       ":rebaseStalePrs",
       ":semanticCommits",
       "config:recommended",
