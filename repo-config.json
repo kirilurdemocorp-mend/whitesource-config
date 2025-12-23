@@ -27,16 +27,16 @@
   "remediateSettings": {
     "enableRenovate": true,
     "extends": [
-        ":enableRenovate",
-        ":rebaseStalePrs",
-        ":semanticCommits",
-        "config:recommended",
-        "docker:enableMajor",
-        "mergeConfidence:all-badges",
-        "group:monorepos",
-        "group:recommended",
-        "replacements:all",
-        "workarounds:all"
+      ":enableRenovate",
+      ":rebaseStalePrs",
+      ":semanticCommits",
+      "config:recommended",
+      "docker:enableMajor",
+      "mergeConfidence:all-badges",
+      "group:monorepos",
+      "group:recommended",
+      "replacements:all",
+      "workarounds:all"
     ],
     "timezone": "UTC",
     "schedule": [
@@ -55,36 +55,22 @@
     },
     "packageRules": [
       {
-       "matchPackagePatterns": [".*"],
-       "dependencyDashboardApproval": true
-     },
-      {
-        "matchUpdateTypes": [
-          "patch",
-          "minor"
-        ],
-        "labels": [
-          "patch release"
-        ]
+        "matchPackagePatterns": [".*"],
+        "dependencyDashboardApproval": true
       },
       {
-        "matchDepTypes": [
-          "devDependencies"
-        ],
-        "matchUpdateTypes": [
-          "patch",
-          "minor"
-        ],
+        "matchUpdateTypes": ["patch", "minor"],
+        "labels": ["patch release"]
+      },
+      {
+        "matchDepTypes": ["devDependencies"],
+        "matchUpdateTypes": ["patch", "minor"],
         "groupName": "devDependencies (non-major)",
         "groupSlug": "dev-dependencies-non-major"
       },
       {
-        "matchDatasources": [
-          "go"
-        ],
-        "matchUpdateTypes": [
-          "pinDigest"
-        ],
+        "matchDatasources": ["go"],
+        "matchUpdateTypes": ["pinDigest"],
         "enabled": false
       }
     ],
@@ -97,8 +83,6 @@
         "^\\.vonage/deploy/.*application\\.yaml$"
       ]
     },
-    "postUpdateOptions": [
-      "gomodTidy"
-    ],
-    "hostRules": [
-      {
+    "postUpdateOptions": ["gomodTidy"]
+  }
+}
