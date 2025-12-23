@@ -2,12 +2,7 @@
   "scanSettings": {
     "configMode": "AUTO",
     "configExternalURL": "",
-    "baseBranches": [
-      "develop",
-      "main",
-      "master",
-      "release",
-      "development"
+
     ],
     "enableLicenseViolations": true,
     "enableIaC": true,
@@ -40,10 +35,6 @@
     "timezone": "UTC",
     "schedule": [
       "before 5am every weekday"
-    ],
-    "baseBranches": [
-      "main",
-      "master"
     ],
     "dependencyDashboard": true,
     "dependencyDashboardAutoclose": true,
